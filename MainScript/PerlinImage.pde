@@ -16,7 +16,7 @@ class PerlinImage{
     
     for(int y=0; y<height; y++){
       for(int x=0; x<width; x++){
-        this.hues[x][y] = map(noise(xOffset+x*perlinSpeed, yOffset+y*perlinSpeed), 0, 1, 0, 127);
+        this.hues[x][y] = map(noise(xOffset+x*noiseSpeed, yOffset+y*noiseSpeed), 0, 1, 0, 127);
       }
     }
   }
@@ -26,7 +26,7 @@ class PerlinImage{
     
     for(int y=0; y<height; y++){
       for(int x=0; x<width; x++){
-        stroke(this.hues[x][y], 255, 255, 100);
+        stroke(this.hues[x][y], 100);
         point(x, y);
       }
     }
